@@ -1,0 +1,33 @@
+<h2>Task Overview</h2>
+
+<section ng-controller="TaskOverviewComponent as taskOverviewComponent">
+<div class="well">
+    <div class="row">
+        <div class="col-xs-12 col-md-5">
+            <div class="form-group">
+                <label>New Task</label>
+                <input [(ngModel)]="taskName" placeholder="What needs to be done?">
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+<!--             <button class="btn btn-default btn-success-outline inline-button btn-lg" 
+              data-ng-click="taskOverviewComponent.addTask()" 
+              title="Add a new task to the To Do List." 
+              style="margin-top: 24px;">
+                <span class="fa fa-plus ng-scope"></span>                
+                Add Task
+            </button>
+ -->            <button (click)="addTask()">Add Task</button>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+
+<ul class="tasks">
+  <li *ngFor="let task of tasks">
+    <app-task [task]="task"></app-task>
+  </li>
+</ul>
