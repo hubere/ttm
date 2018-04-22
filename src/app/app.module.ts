@@ -2,6 +2,7 @@ import { MessageService } from './message.service';
 import { TaskService } from './task.service';
 import { UserService } from './user.service';
 import { BrowserModule } from '@angular/platform-browser';
+import { LayoutModule } from '@angular/cdk/layout';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -25,6 +26,7 @@ import { MessagesComponent } from './messages/messages.component';
   imports: [
     BrowserModule,
     FormsModule,
+    LayoutModule,
     HttpModule
   ],
   providers: [
